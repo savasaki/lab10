@@ -70,7 +70,7 @@ public class Tools : IInit, IComparable, ICloneable
 
     public override bool Equals(object obj)
     {
-        Tools instrument = obj as Tools;
+       Tools instrument = obj as Tools;
         if (instrument != null)
             return instrument.NameOfTool == this.NameOfTool;
         else

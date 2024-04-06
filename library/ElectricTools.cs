@@ -83,7 +83,7 @@ namespace library
         // Метод для получения базового инструмента
         public Tools GetBase()
         {
-            return baseTool;
+            return new Tools(NameOfTool, id.Number);
         }
         public ElectricTools GetElectricTools()
         {
