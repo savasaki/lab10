@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Net.Mime.MediaTypeNames;
 namespace library
 {
     public class ElectricTools : Tools
@@ -74,10 +75,19 @@ namespace library
                 }
             } while (PowerSource == "NoBattery");
         }
-
         public override void Show()
         {
             Console.WriteLine($"ID {this.id}: Наименование - {NameOfTool}, источник питания - {PowerSource}, время работы от батареи в минутах - {BatteryLife}");
+        }
+        private Tools baseTool; // Поле для хранения базового инструмента
+        // Метод для получения базового инструмента
+        public Tools GetBase()
+        {
+            return baseTool;
+        }
+        public ElectricTools GetElectricTools()
+        {
+            return this; // Возвращает текущий объект ElectricTools
         }
     }
 }
